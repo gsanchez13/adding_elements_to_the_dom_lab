@@ -1,0 +1,44 @@
+<!-- Make a website that displays a list containing all of the names below.
+Make all of your `<li>` items inside of a script.
+```js
+{
+  "results" : [
+    { "name" : "Anne" },
+    { "name" : "Bri" },
+    { "name" : "Chaz" },
+    { "name" : "Darlene" }
+  ]
+}
+``` -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Number 2</title>
+  </head>
+  <body>
+      <h1> Here is a list of names</h1>
+    <script>
+      let newList = document.createElement('ul')
+      document.querySelector('body').appendChild(newList)
+      let results = [
+        { "name" : "Anne" },
+        { "name" : "Bri" },
+        { "name" : "Chaz" },
+        { "name" : "Darlene" }
+      ]
+      for(let i = 0; i < results.length; i++ ) {
+        let listItem = document.createElement('li')
+        listItem.innerText = results[i].name
+        newList.appendChild(listItem)
+      }
+      // document.querySelector('body').appendChild(newList)
+      </script>
+  </body>
+</html>
+
+<!-- <ul>
+    <li id='name1'> Anne </li>
+    <li id='name2'> Bri </li>
+    <li id='name3'> Chaz </li>
+    <li id='name4'> Darlene </li>
+  </ul> -->

@@ -1,0 +1,42 @@
+<!-- Make a website with a number input, a button, and 3 paragraphs.
+Clicking on the button should add the number to a list.  The first
+paragraph should show the average of all the numbers, the second paragraph
+should show the maximum value, and the third paragraph should show the minimum value. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 7</title>
+  </head>
+  <body>
+    <input type="number" id="number" placeholder="Input a number" />
+    <br>
+    <button onclick="addNumberItem()">Click to add number to the list</button>
+    <br>
+    <p id="averageValue"></p>
+    <p id="maximumValue"></p>
+    <p id="minimumValue"></p>
+    <script>
+      const addNumberItem = () => {
+        let input = document.getElementById('number').value
+        console.log(input)
+        let para1 = document.getElementById('averageValue').innerText
+        let para2 = document.getElementById('maximumValue').innerText
+        let para3 = document.getElementById('minimumValue').innerText
+        let nums = []
+        let numArray = nums.push(input)
+        console.log(numArray)
+          // let sumValue = numArray.reduce((acc, curr) => {
+          //   return acc + curr
+          // },0)
+          // let averageValue = Math.floor((sum)/ numArray.length)
+          // para1 = `Your new average value is ${averageValue}`
+          // let maximumValue
+    }
+
+      </script>
+  </body>
+</html>
+
+<!-- 1. create a list to put all inputs that are submitted(an array?)
+2. create a button that when clicked will invoke all functions associated (findAverage, findMin, findMax)
+3. this list will also add any new inputs into the array and account for them in any given function -->

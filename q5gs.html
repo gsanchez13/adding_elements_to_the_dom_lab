@@ -1,0 +1,24 @@
+<!-- Make a website with a text input and a button.  Clicking on the
+button should create a new list item with its text the same as the text in the input. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Number 5</title>
+  </head>
+  <input type="text" id="input">
+  <br>
+  <button onclick="newListItem()"> Click Here to Create New List Item</button>
+  <body>
+    <script>
+      const newListItem = () => {
+        let body = document.querySelector('body')
+        let list = document.createElement('ul')
+        body.appendChild(list)
+        let input = document.querySelector('#input').value
+        let listItem = document.createElement('li')
+        listItem.innerText = input
+        list.appendChild(listItem)
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!-- Make a website with a text input, a number input and a button.
+Clicking on the button should add that many copies of the text in the text input to a list. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Number 6</title>
+  </head>
+  <input type="text" id="text" placeholder="Insert text here">
+  <br>
+  <input type="text" id="number" placeholder="Insert number here">
+  <br>
+  <button onclick="listText()">Click here to list input! </button>
+
+  <body>
+    <script>
+      const listText = () => {
+        let body = document.querySelector('body')
+        let list = document.createElement('ul')
+          body.appendChild(list)
+        let inputText = document.querySelector('#text').value
+        let inputNumber = Number(document.querySelector('#number').value)
+        for(i = 0; i < inputNumber; i ++) {
+          let listItem = document.createElement('li')
+          listItem.innerText = inputText
+          list.appendChild(listItem)
+        }
+      }
+      </script>
+  </body>
+</html>
+
+<!--
+1. name your body using querySelector
+2. create a list using createElement
+3. append list to body using appendChild
+4. set variable equal to value of text input AND number input
+5. set number input to a number and not a string
+6. create list items using createElement per number of input with n being the number in for loop
+7. set the value of the input to the list item's innertext
+8. append list items to list -->

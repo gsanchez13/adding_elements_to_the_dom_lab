@@ -1,0 +1,18 @@
+<!-- Make a website with a button.  Clicking on the button should remove the button. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 8</title>
+  </head>
+  <button onclick='deleteButton()'> Click me to delete me! </button>
+  <br>
+  <body>
+    <script>
+      const deleteButton = () => {
+        let button = document.querySelector('button')
+        let parent = button.parentNode
+        parent.removeChild(button)
+      }
+      </script>
+  </body>
+</html>

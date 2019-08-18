@@ -1,0 +1,25 @@
+<!-- Make a website with a heading, an input text field and a button.
+Clicking the button should change the heading's text to be the text in the input. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 1</title>
+    <h1 id="header"> WELCOME </h1>
+  </head>
+  <input type="text" id="input" placeholder="type input here">
+  <button onclick="checkHeader()">Click here to change header</button>
+  <body>
+    <script>
+      const checkHeader = () => {
+        let headerText = document.querySelector('h1')
+        let inputText = document.querySelector('input')
+        headerText.innerText = inputText.value
+        // let headerText = document.getElementById('header')
+        // console.dir(headerText)
+        // let inputText = document.getElementById('input').value
+        // console.dir(inputText)
+        // headerText = inputText
+      }
+    </script>
+  </body>
+</html>
